@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "zz0_WYZRBjGtB533ZFUyb"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/hero-bg.png"
+type = "image"
+title = "Hero background image"
+
+[[generated]]
+id = "pX5KPXm2DMxqUS7-T_8Uf"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/cert-architect.png"
+type = "image"
+title = "Architect certification badge"
+
+[[generated]]
+id = "H9cMTtnig3PSo3sLiRtG1"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/cert-data.png"
+type = "image"
+title = "Data Engineer certification badge"
+
+[[generated]]
+id = "Uqiwte-OuYdEhO5aqCywI"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/cert-ai.png"
+type = "image"
+title = "AI Engineer certification badge"
+
+[[generated]]
+id = "PrGJpMkQJQ2Mk54rMw_wn"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/cert-devops.png"
+type = "image"
+title = "DevOps certification badge"
+
+[[generated]]
+id = "Zmd2Amerm8_OABiJabaIX"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/cert-security.png"
+type = "image"
+title = "Security certification badge"
