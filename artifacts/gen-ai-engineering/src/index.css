@@ -52,35 +52,35 @@
 }
 
 :root, .dark {
-  --background: 220 30% 6%;
-  --foreground: 210 40% 95%;
+  --background: 222 28% 13%;
+  --foreground: 210 30% 96%;
 
-  --card: 220 30% 9%;
-  --card-foreground: 210 40% 95%;
-  --card-border: 220 25% 18%;
+  --card: 222 28% 17%;
+  --card-foreground: 210 30% 96%;
+  --card-border: 220 22% 26%;
 
-  --popover: 220 30% 9%;
-  --popover-foreground: 210 40% 95%;
-  --popover-border: 220 25% 18%;
+  --popover: 222 28% 17%;
+  --popover-foreground: 210 30% 96%;
+  --popover-border: 220 22% 26%;
 
-  --primary: 210 100% 55%;
+  --primary: 210 100% 56%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 220 40% 12%;
-  --secondary-foreground: 210 40% 95%;
+  --secondary: 222 28% 21%;
+  --secondary-foreground: 210 30% 96%;
 
-  --muted: 220 20% 15%;
-  --muted-foreground: 220 15% 60%;
+  --muted: 222 22% 22%;
+  --muted-foreground: 220 18% 68%;
 
-  --accent: 270 80% 60%;
-  --accent-foreground: 210 40% 95%;
+  --accent: 265 75% 62%;
+  --accent-foreground: 210 30% 96%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 220 25% 18%;
-  --input: 220 25% 18%;
-  --ring: 210 100% 55%;
+  --border: 220 22% 26%;
+  --input: 220 22% 26%;
+  --ring: 210 100% 56%;
 
   --radius: 0.5rem;
 }
@@ -96,7 +96,7 @@
 }
 
 .glass-card {
-  @apply bg-card/40 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-colors duration-300;
+  @apply bg-card/60 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-colors duration-300;
 }
 
 .text-gradient {
@@ -105,6 +105,6 @@
 
 .bg-grid-pattern {
   background-size: 40px 40px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 }
