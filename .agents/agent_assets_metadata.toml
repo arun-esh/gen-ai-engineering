@@ -36,3 +36,27 @@ id = "Zmd2Amerm8_OABiJabaIX"
 uri = "file://artifacts/gen-ai-engineering/src/assets/images/cert-security.png"
 type = "image"
 title = "Security certification badge"
+
+[[generated]]
+id = "o4hi_reekJOrjXuHMy85W"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/service-architecture.png"
+type = "image"
+title = "cloud architecture visualization"
+
+[[generated]]
+id = "r6Sw3zbSmoLaeI5K8tmR5"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/service-migration.png"
+type = "image"
+title = "cloud migration data streams"
+
+[[generated]]
+id = "Q6hnbU41XRRSyd2VAsdx5"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/service-genai.png"
+type = "image"
+title = "generative AI neural network"
+
+[[generated]]
+id = "7ImesSa0zEeHMKffr0D4_"
+uri = "file://artifacts/gen-ai-engineering/src/assets/images/service-devops.png"
+type = "image"
+title = "devops kubernetes pipeline"

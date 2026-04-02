@@ -3,12 +3,18 @@ import { Section, SectionHeader } from "@/components/section";
 import { Cloud, Cpu, Server, Code2, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { SEO } from "@/components/seo";
+import serviceArchitecture from "@/assets/images/service-architecture.png";
+import serviceMigration from "@/assets/images/service-migration.png";
+import serviceGenai from "@/assets/images/service-genai.png";
+import serviceDevops from "@/assets/images/service-devops.png";
 
 export default function Services() {
   const services = [
     {
       id: "architecture",
       icon: Cloud,
+      image: serviceArchitecture,
+      imageAlt: "Cloud architecture network topology visualization",
       title: "Cloud Architecture",
       description: "We design robust, scalable, and secure cloud environments on Google Cloud Platform tailored to your specific enterprise needs.",
       features: [
@@ -21,6 +27,8 @@ export default function Services() {
     {
       id: "migration",
       icon: Server,
+      image: serviceMigration,
+      imageAlt: "Cloud migration data streams visualization",
       title: "Cloud Migration",
       description: "Seamlessly transition your workloads to GCP with zero downtime. We handle complex migrations from on-premise datacenters or other cloud providers.",
       features: [
@@ -33,6 +41,8 @@ export default function Services() {
     {
       id: "genai",
       icon: Cpu,
+      image: serviceGenai,
+      imageAlt: "Generative AI neural network visualization",
       title: "Generative AI Solutions",
       description: "Leverage the power of Vertex AI and Gemini to build intelligent applications that transform your business operations and customer experiences.",
       features: [
@@ -45,6 +55,8 @@ export default function Services() {
     {
       id: "devops",
       icon: Code2,
+      image: serviceDevops,
+      imageAlt: "DevOps CI/CD pipeline and Kubernetes visualization",
       title: "DevOps & Automation",
       description: "Accelerate your software delivery lifecycle with modern DevOps practices, Infrastructure as Code, and container orchestration.",
       features: [
@@ -102,15 +114,14 @@ export default function Services() {
                 </ul>
               </div>
               <div className="w-full lg:w-1/2">
-                <div className="glass-card rounded-2xl p-1 aspect-video relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-50" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                     {/* Abstract visual representation based on service */}
-                     {index === 0 && <div className="w-32 h-32 border-4 border-primary/50 rounded-full animate-[spin_10s_linear_infinite]" />}
-                     {index === 1 && <div className="flex gap-4"><div className="w-16 h-32 bg-primary/30 rounded" /><div className="w-16 h-32 bg-accent/30 rounded" /></div>}
-                     {index === 2 && <div className="grid grid-cols-3 gap-2"><div className="w-10 h-10 bg-primary/40 rounded-full"/><div className="w-10 h-10 bg-accent/40 rounded-full"/><div className="w-10 h-10 bg-white/20 rounded-full"/></div>}
-                     {index === 3 && <div className="w-40 h-10 bg-primary/20 rounded-full overflow-hidden"><div className="w-1/2 h-full bg-primary animate-[pulse_2s_ease-in-out_infinite]" /></div>}
-                  </div>
+                <div className="rounded-2xl aspect-video relative overflow-hidden group border border-white/10">
+                  <img
+                    src={service.image}
+                    alt={service.imageAlt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                 </div>
               </div>
             </motion.div>
