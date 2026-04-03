@@ -1,0 +1,28 @@
+# GCP Deployment Notes - Gen AI Engineering
+
+## Fix: IAM Permission Denied (Developer Connect)
+This error occurs because the Cloud Build service account doesn't have permission to pull code from your connected repository.
+
+### Project Details
+Project Number: 519811928290
+Service Account: 519811928290@cloudbuild.gserviceaccount.com
+
+### Run this command to grant access:
+gcloud projects add-iam-policy-binding 519811928290 \
+    --member="serviceAccount:519811928290@cloudbuild.gserviceaccount.com" \
+    --role="roles/developerconnect.read"
+
+---
+
+## Deploy from Local Source (Fastest)
+If you want to bypass repository connection issues and deploy the code on your machine:
+
+### 1. Build the image
+gcloud builds submit --tag gcr.io/arunesh-genai-engineering/gen-ai-frontend
+
+### 2. Deploy to Cloud Run
+gcloud run deploy gen-ai-frontend \
+  --image gcr.io/arunesh-genai-engineering/gen-ai-frontend \
+  --platform managed \
+  --region us-central1 \
+  --allow-unauthenticated
