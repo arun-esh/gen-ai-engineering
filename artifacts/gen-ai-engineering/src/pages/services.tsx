@@ -136,8 +136,8 @@ export default function Services() {
             Every enterprise has unique challenges. Let's discuss how we can architect a solution specifically for your business.
           </p>
           <Link
-            href="/contact"
-            className="inline-flex items-center justify-center bg-white text-black px-8 py-3 rounded-md text-base font-semibold hover:bg-gray-200 transition-colors"
+            href="/about"
+            className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-md text-lg font-medium transition-all hover:shadow-[0_0_20px_rgba(0,123,255,0.4)]"
           >
             Contact our engineering team
           </Link>

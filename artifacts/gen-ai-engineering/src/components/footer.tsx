@@ -16,20 +16,17 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground max-w-sm mb-6">
-              Enterprise-grade cloud infrastructure meets cutting-edge Generative AI. 
+              Enterprise-grade cloud infrastructure meets cutting-edge Generative AI.
               We architect scalable, secure, and intelligent solutions on Google Cloud Platform.
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-white/10 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-white/10 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground hover:text-white hover:bg-white/10 transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -45,16 +42,15 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-6">Company</h4>
             <ul className="flex flex-col gap-4 text-muted-foreground">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About & Contact</Link></li>
               <li><Link href="/solutions" className="hover:text-primary transition-colors">Industry Solutions</Link></li>
-              <li><Link href="/certifications" className="hover:text-primary transition-colors">Certifications</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              {/* <li><Link href="/certifications" className="hover:text-primary transition-colors">Certifications</Link></li> */}
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2024 Gen AI Engineering. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Gen AI Engineering. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>

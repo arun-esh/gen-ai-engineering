@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Server, Cloud, Cpu, Code2, Shield, Database, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Server, Cloud, Cpu, Code2, Shield, Database, CheckCircle2, Terminal, LayoutPanelTop, Sparkles, Zap, Key, Workflow, Box, Table, Radio, Layers } from "lucide-react";
 import { Section, SectionHeader } from "@/components/section";
 import { SEO } from "@/components/seo";
 
@@ -32,8 +32,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
-              <span className="inline-block py-1 px-3 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-primary mb-6">
-                Google Cloud Premier Partner
+              <span className="inline-block py-2 px-6 rounded-full bg-primary/10 border border-primary/20 text-base md:text-lg font-bold text-primary mb-8 shadow-[0_0_15px_rgba(0,123,255,0.2)] tracking-tight">
+                Certified Google Cloud Architecture & AI Experts
               </span>
             </motion.div>
 
@@ -62,10 +62,10 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
-                href="/contact"
+                href="/about"
                 className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-md text-lg font-medium transition-all hover:shadow-[0_0_20px_rgba(0,123,255,0.4)]"
               >
-                Book Free Consultation
+                Contact Us
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
@@ -87,7 +87,7 @@ export default function Home() {
           align="center"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
               icon: Cloud,
@@ -124,19 +124,17 @@ export default function Home() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card p-8 rounded-xl group relative overflow-hidden"
+              className="glass-card p-10 rounded-2xl group relative overflow-hidden flex flex-col min-h-[320px] cursor-default"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 text-primary">
-                <service.icon className="w-6 h-6" />
+              <div className="w-16 h-16 rounded-xl bg-primary/20 flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
-              <p className="text-muted-foreground mb-6">{service.desc}</p>
-              <Link href="/services" className="text-primary font-medium inline-flex items-center text-sm hover:underline">
-                Learn more <ArrowRight className="w-4 h-4 ml-1" />
-              </Link>
+              <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">{service.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -182,26 +180,130 @@ export default function Home() {
           >
             <div className="absolute -inset-1 bg-gradient-to-tr from-primary to-accent rounded-2xl blur opacity-20" />
             <div className="relative glass-card rounded-2xl p-8 border border-white/10 bg-background/80">
-              <pre className="text-sm text-primary/80 font-mono overflow-x-auto">
-                <code>
-                  {`// Infrastructure as Code
-resource "google_container_cluster" "primary" {
-  name     = "ai-production-cluster"
-  location = "us-central1"
-
-  remove_default_node_pool = true
-  initial_node_count       = 1
-
-  private_cluster_config {
-    enable_private_nodes    = true
-    enable_private_endpoint = false
-    master_ipv4_cidr_block  = "172.16.0.0/28"
-  }
-}`}
+              <pre className="text-sm font-mono overflow-x-auto">
+                <code className="grid gap-1">
+                  <span className="text-muted-foreground">{"// Infrastructure as Code"}</span>
+                  <span>
+                    <span className="text-accent">resource</span>{" "}
+                    <span className="text-primary">"google_container_cluster"</span>{" "}
+                    <span className="text-white">"primary"</span> {"{"}
+                  </span>
+                  <span className="pl-4">
+                    <span className="text-primary/70">name</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-accent">"ai-production-cluster"</span>
+                  </span>
+                  <span className="pl-4">
+                    <span className="text-primary/70">location</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-accent">"us-central1"</span>
+                  </span>
+                  <span className="pl-4">
+                    <span className="text-primary/70">remove_default_node_pool</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-accent">true</span>
+                  </span>
+                  <span className="pl-4">
+                    <span className="text-primary/70">initial_node_count</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-accent">1</span>
+                  </span>
+                  <span className="pl-4">
+                    <span className="text-primary/70">private_cluster_config</span> {"{"}
+                  </span>
+                  <span className="pl-8">
+                    <span className="text-primary/70">enable_private_nodes</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-accent">true</span>
+                  </span>
+                  <span className="pl-8">
+                    <span className="text-primary/70">enable_private_endpoint</span>{" "}
+                    <span className="text-white">=</span>{" "}
+                    <span className="text-accent">false</span>
+                  </span>
+                  <span className="pl-4">{"}"}</span>
+                  <span>{"}"}</span>
                 </code>
               </pre>
             </div>
           </motion.div>
+        </div>
+      </Section>
+
+      {/* Tech Stack Section */}
+      <Section className="bg-background relative border-y border-white/5 overflow-hidden py-32">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-white">Our Engineering Stack</h2>
+            <p className="text-muted-foreground text-xl leading-relaxed">
+              We architect solutions using the industry's most robust and scalable enterprise technologies.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { name: "Vertex AI", icon: Cpu, color: "text-accent" },
+              { name: "Gemini", icon: Sparkles, color: "text-yellow-400" },
+              { name: "Kubernetes (GKE)", icon: Server, color: "text-blue-400" },
+              { name: "Cloud Run", icon: Zap, color: "text-blue-300" },
+              { name: "Terraform", icon: Code2, color: "text-primary" },
+              { name: "IAM Security", icon: Key, color: "text-green-400" },
+              { name: "GitHub Actions", icon: Workflow, color: "text-white" },
+              { name: "Docker", icon: Box, color: "text-blue-500" },
+              { name: "BigQuery", icon: Database, color: "text-blue-600" },
+              { name: "Cloud SQL", icon: Table, color: "text-blue-400" },
+              { name: "Pub/Sub", icon: Radio, color: "text-orange-400" },
+              { name: "LangChain", icon: Layers, color: "text-accent" },
+            ].map((tech, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="glass-card p-8 rounded-2xl border border-white/5 hover:border-primary/30 transition-all group flex flex-col items-center justify-center text-center"
+              >
+                <div className={`w-12 h-12 mb-4 transition-transform duration-500 group-hover:scale-110 ${tech.color}`}>
+                  <tech.icon className="w-full h-full" />
+                </div>
+                <span className="text-white font-bold tracking-tight text-lg">{tech.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Process Section */}
+      <Section className="bg-background">
+        <SectionHeader 
+          title="The Engineering Lifecycle" 
+          subtitle="Our systematic approach to building production-ready cloud and AI systems."
+          align="center"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {/* Connecting Line (Desktop) */}
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-y-1/2 z-0" />
+          
+          {[
+            { step: "01", title: "Discover & Architect", desc: "We analyze your requirements and design a high-availability, cost-optimized blueprint." },
+            { step: "02", title: "Automate & Build", desc: "Using IaC and CI/CD, we deploy your infrastructure with precision and security." },
+            { step: "03", title: "Optimize & Scale", desc: "We monitor performance and iterate to ensure your system grows with your users." }
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.2 }}
+              className="relative z-10 glass-card p-8 rounded-2xl text-center"
+            >
+              <span className="text-4xl font-black text-primary/20 mb-4 block">{item.step}</span>
+              <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+              <p className="text-muted-foreground">{item.desc}</p>
+            </motion.div>
+          ))}
         </div>
       </Section>
 
@@ -211,13 +313,13 @@ resource "google_container_cluster" "primary" {
         <div className="container mx-auto px-6 relative z-10 text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6 tracking-tight">Ready to architect your future?</h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Schedule a free architecture review or Generative AI workshop with our principal engineers.
+            Reach out to our engineering team to discuss your cloud and Generative AI needs.
           </p>
           <Link
-            href="/contact"
+            href="/about"
             className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-md text-lg font-medium transition-all hover:shadow-[0_0_20px_rgba(0,123,255,0.4)]"
           >
-            Book Free Consultation
+            Contact Us
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>

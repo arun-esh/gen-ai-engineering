@@ -24,9 +24,7 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
     { href: "/solutions", label: "Solutions" },
-    { href: "/certifications", label: "Certifications" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    // { href: "/certifications", label: "Certifications" },
   ];
 
   return (
@@ -64,10 +62,10 @@ export function Header() {
             ))}
           </ul>
           <Link
-            href="/contact"
+            href="/about"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-5 py-2.5 rounded-md text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(0,123,255,0.5)]"
           >
-            Book Consultation
+            Contact Us
           </Link>
         </nav>
 
@@ -95,10 +93,10 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/about"
             className="bg-primary text-center hover:bg-primary/90 text-primary-foreground px-5 py-3 rounded-md font-medium mt-4"
           >
-            Book Consultation
+            Contact Us
           </Link>
         </div>
       )}
