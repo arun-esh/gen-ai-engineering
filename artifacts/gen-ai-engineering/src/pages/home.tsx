@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, Server, Cloud, Cpu, Code2, Shield, Database, CheckCircle2, Terminal, LayoutPanelTop, Sparkles, Zap, Key, Workflow, Box, Table, Radio, Layers } from "lucide-react";
 import { Section, SectionHeader } from "@/components/section";
 import { SEO } from "@/components/seo";
+import heroBg from "@/assets/images/hero-bg.png";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="./assets/images/hero-bg.png"
+            src={heroBg}
             alt="Hero background"
             className="w-full h-full object-cover opacity-30 mix-blend-screen"
           />
