@@ -8,8 +8,8 @@ RUN corepack enable
 
 WORKDIR /app
 
-# Copy workspace configuration
-COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
+# Copy workspace configuration and base TS configs
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json tsconfig.base.json tsconfig.json ./
 
 # Copy necessary library dependencies
 # Note: We copy the whole lib and artifacts folders to ensure all workspace refs are resolved
