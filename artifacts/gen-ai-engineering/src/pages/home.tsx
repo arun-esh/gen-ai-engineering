@@ -13,7 +13,7 @@ export default function Home() {
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/hero-bg.png"
+            src="./assets/images/hero-bg.png"
             alt="Hero background"
             className="w-full h-full object-cover opacity-30 mix-blend-screen"
           />
@@ -36,7 +36,7 @@ export default function Home() {
                 Google Cloud Premier Partner
               </span>
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function Home() {
             >
               Cloud & <span className="text-gradient">Generative AI</span> Engineering
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function Home() {
             >
               We build scalable, secure, and intelligent enterprise infrastructure on Google Cloud Platform. Move fast without breaking things.
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function Home() {
           subtitle="Comprehensive cloud and AI engineering services designed for enterprise scale."
           align="center"
         />
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
@@ -157,7 +157,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground mb-8">
               We don't just build proof-of-concepts. We build production-ready systems that scale, secure your data, and deliver tangible business value.
             </p>
-            
+
             <ul className="space-y-4">
               {[
                 "Deep GCP Expertise across infrastructure, data, and AI.",
@@ -172,7 +172,7 @@ export default function Home() {
               ))}
             </ul>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -182,9 +182,9 @@ export default function Home() {
           >
             <div className="absolute -inset-1 bg-gradient-to-tr from-primary to-accent rounded-2xl blur opacity-20" />
             <div className="relative glass-card rounded-2xl p-8 border border-white/10 bg-background/80">
-               <pre className="text-sm text-primary/80 font-mono overflow-x-auto">
-                 <code>
-{`// Infrastructure as Code
+              <pre className="text-sm text-primary/80 font-mono overflow-x-auto">
+                <code>
+                  {`// Infrastructure as Code
 resource "google_container_cluster" "primary" {
   name     = "ai-production-cluster"
   location = "us-central1"
@@ -198,8 +198,8 @@ resource "google_container_cluster" "primary" {
     master_ipv4_cidr_block  = "172.16.0.0/28"
   }
 }`}
-                 </code>
-               </pre>
+                </code>
+              </pre>
             </div>
           </motion.div>
         </div>

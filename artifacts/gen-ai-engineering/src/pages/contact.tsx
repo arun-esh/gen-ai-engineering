@@ -12,7 +12,7 @@ export default function Contact() {
     phone: "",
     message: ""
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -26,7 +26,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -57,17 +57,17 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">hello@genaiengineering.com</p>
+                  <p className="text-muted-foreground">arunesh@genaieng.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent shrink-0 mr-6">
                   <Linkedin className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Connect on LinkedIn</h3>
-                  <a href="#" className="text-muted-foreground hover:text-white transition-colors">linkedin.com/company/genaiengineering</a>
+                  <a href="https://www.linkedin.com/company/gen-ai-engineering" className="text-muted-foreground hover:text-white transition-colors">https://www.linkedin.com/company/gen-ai-engineering</a>
                 </div>
               </div>
 
@@ -77,7 +77,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold mb-1">Headquarters</h3>
-                  <p className="text-muted-foreground">San Francisco, CA<br/>Global Remote Team</p>
+                  <p className="text-muted-foreground">Montreal, QC<br />Global Remote Team</p>
                 </div>
               </div>
             </div>
@@ -90,9 +90,9 @@ export default function Contact() {
           >
             <div className="glass-card rounded-2xl p-8 lg:p-10 border border-white/10">
               <h2 className="text-2xl font-bold mb-8">Book a Consultation</h2>
-              
+
               {isSuccess ? (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="flex flex-col items-center justify-center py-12 text-center"
@@ -104,7 +104,7 @@ export default function Contact() {
                   <p className="text-muted-foreground">
                     Thank you for reaching out. One of our engineers will be in touch shortly.
                   </p>
-                  <button 
+                  <button
                     onClick={() => setIsSuccess(false)}
                     className="mt-8 text-primary hover:underline text-sm font-medium"
                   >
